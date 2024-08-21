@@ -12,7 +12,7 @@ export function createCircles(numberOfCircles) {
     // Clear any existing circles
     container.innerHTML = '';
 
-    // Create the circles
+    // Creating the articles
     for (let i = 0; i < numberOfCircles; i++) {
         const circle = document.createElement('div');
         circle.classList.add('circle');
@@ -26,12 +26,12 @@ export function createCircles(numberOfCircles) {
         const endPosX = `${Math.floor(Math.random() * 50)}%`;
         const endPosY = `${Math.floor(Math.random() * 100)}%`;
 
-        // Add a random size animation between 200 and 500px
+        // Add a random size animation
         const size = Math.floor(Math.random() * 300) + 200;
         circle.style.width = `${size}px`;
         circle.style.height = `${size}px`;
 
-        // Add a random blur between 50 and 100 px
+        // Add a random blur
         const blur = Math.floor(Math.random() * 50) + 50;
         circle.style.filter = `blur(${blur}px)`;
 

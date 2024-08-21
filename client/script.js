@@ -26,7 +26,7 @@ if (!content) {
             let numberOfCircles = 5;
             createCircles(numberOfCircles);
 
-            // Verwijder dubbele berichten
+            // Remove duplixates from the data
             const uniqueChallenges = data.filter((challenge, index, self) =>
                 index === self.findIndex((t) => (
                     t.message === challenge.message

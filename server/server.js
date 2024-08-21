@@ -20,7 +20,7 @@ app.get('/dataApiAssigment', async (req, res) => {
         let options = {
             method: 'POST',
             headers: {
-                'Authorization': `Bearer uM0M7uypyeeHZ741XIrs9KsFOUEhxUdtXJA=`,
+                'Authorization': `Bearer ${process.env.API_KEY}`,
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({})

@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Moderustic', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #351069;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #fff;
+}
+
+p {
+    color: #f1f1f1d4;
+    font-size: 1.15em;
+}
+
+h1 {
+    font-size: 5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 0 .2em 0;
+    mix-blend-mode: overlay;
+    color: white;
+
+}
+
+h2 {
+    padding: 1em 0 0 0;
+    font-size: 2.1em;
+    text-transform: uppercase;
+}
+
+
+.container-challenge {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin: 1em;
+}
+
+.challenge {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0;
+    padding: 1.6em 1em;
+    width: 100%;
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+    border: 1px solid rgba(255, 255, 255, 0.19);
+}
+
+.flag {
+    margin: 1em;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+}
+
+#content {
+    display: none;
+}
+
+/* styles.css */
+#loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    ;
+}
+
+.bouncing-dots {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dot {
+    width: 20px;
+    height: 80px;
+    margin: .5em;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+    border: 1px solid rgba(255, 255, 255, 0.19);
+    border-radius: 5%;
+    animation: bounce 1.5s infinite alternate;
+}
+
+.dot:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+.moving-circles-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+
+    .circle {
+        position: absolute;
+        background-color: rgb(160 141 65);
+        filter: blur(70px);
+        width: 325px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        animation: move 40s infinite;
+    }
+}
